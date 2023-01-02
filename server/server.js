@@ -1,9 +1,12 @@
 import * as dotenv from 'dotenv';
 dotenv.config();
+import cors from 'cors';
 import express from 'express';
 import mongoose from 'mongoose';
 import {router as workoutsRoutes} from './routes/workouts.js';
 const app = express();
+
+app.use(cors()); // Allows for frontend running on a specific server to send requests to backend running on another server
 
 app.use((req, res, next) => {
   console.log(req.method, req.path);
