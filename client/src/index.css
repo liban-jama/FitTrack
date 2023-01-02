@@ -1,13 +1,33 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* layout */ /* Creating two variables which are two colors that can be used throughout this css file */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a;
+}
+body { /* Set background of entire page to light gray color with Poppins font */
+  background: #f1f1f1;
+  margin: 0; /* Removes any default margin that may have been applied to the element which in this case we are targeting the entire page*/
+  font-family: "Poppins";
+}
+header {
+  background: #fff; /* set the Header tag for our navbar to be a different color */
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto; /* Sets space around element meaning 0 pixel margin top and bottom and automatic left and right */
+  padding: 10px 20px; /*Pushes a bit of space around the "FitTrack text" */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: #333;
+  text-decoration: none;
+}
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
 }
