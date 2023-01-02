@@ -23,11 +23,11 @@ header .container {
   justify-content: space-between;
 }
 header a {
-  color: #333;
+  color: #333; /* Color of all text is in header/navbar is black 333 */
   text-decoration: none;
 }
 .pages{
   max-width: 1400px;
-  padding: 20px;
+  padding: 20px; /* pushing/padding text from all 4 sides with 20 pix */
   margin: 0 auto;
 }
