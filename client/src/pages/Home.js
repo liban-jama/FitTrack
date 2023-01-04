@@ -1,5 +1,6 @@
 import {useEffect, useState} from 'react';
-
+// components
+import WorkoutDetails from '../components/workoutDetails.js';
 const Home = () => {
 
   // Fetch ALL Workouts from Server and list them in the home page -- UseEffect Hook
@@ -34,17 +35,23 @@ const Home = () => {
     <h2> Home </h2> 
     
     <div className = "workouts"> 
-      {workouts ? ( // Ternary if TRUE render code within first set of braces if FALSE run code within second set of braces
-
-        workouts.map((workout) => (  // Now we want to cycle through our workouts but only when we have some || Normal braces not curly since we want to return a template
-        // Only if we have a value for workouts then we will start to map through them
-        <p key = {workout._id}>{workout.title}</p>
-      ))
-      ) : (
-        <p>An Error occured while fetching the workouts</p>
-      )
-    }
+  {workouts ? (
+    <div>
+      {workouts.map((workout) => (
+        // <div>
+        // <p key = {workout._id}>{workout.title}</p>
+        // <p key = {workout._id}>{workout.weight}</p>
+        // <p key = {workout._id}>{workout.reps}</p>
+        // <p key = {workout._id}>{workout.createdAt}</p>
+        // </div>
+        <WorkoutDetails key = {workout._id} workout = {workout} />
+      ))}
     </div>
+  ) : (
+    <p>An Error occured while fetching the workouts</p>
+  )}
+</div>
+
   </div>
   )
 };
