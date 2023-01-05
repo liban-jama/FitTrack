@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react';
 // components
 import WorkoutDetails from '../components/workoutDetails.js';
+import WorkoutForm from '../components/WorkoutForm.js';
 const Home = () => {
 
   // Fetch ALL Workouts from Server and list them in the home page -- UseEffect Hook
@@ -33,21 +34,22 @@ const Home = () => {
   return (
   <div className = "home">
     <h2> Home </h2> 
-    
-    <div className = "workouts"> 
-  {workouts ? (
-    <div>
-      {workouts.map((workout) => (
       
-        <WorkoutDetails key = {workout._id} workout = {workout} />
+      <div className = "workouts"> 
+    {workouts ? (
+      <div>
+        {workouts.map((workout) => (
         
-      ))}
-    </div>
-  ) : (
-    <p>An Error occured while fetching the workouts</p>
-  )}
-</div>
+          <WorkoutDetails key = {workout._id} workout = {workout} />
 
+        ))}
+      </div>
+    ) : (
+      <p>An Error occured while fetching the workouts</p>
+    )}
+    
+  </div>
+      <WorkoutForm/>
   </div>
   )
 };

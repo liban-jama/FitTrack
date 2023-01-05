@@ -36,7 +36,7 @@ export const createNewWorkout = async (req, res) => {
       res.status(200).json(workout);
     }
     catch (error) {
-      res.status(400).json({error: error.message0});
+      res.status(400).json({error: error.message});
     }
 };
 

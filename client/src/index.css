@@ -31,3 +31,33 @@ header a {
   padding: 20px; /* pushing/padding text from all 4 sides with 20 pix */
   margin: 0 auto;
 }
+
+.workout-details { /* Making it look like a card */
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5x rgba(0,0,0,0.5);
+}
+.workout-details h4 {
+  margin: 0 0 10px auto;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+.workout-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+.workout-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
