@@ -38,13 +38,9 @@ const Home = () => {
   {workouts ? (
     <div>
       {workouts.map((workout) => (
-        // <div>
-        // <p key = {workout._id}>{workout.title}</p>
-        // <p key = {workout._id}>{workout.weight}</p>
-        // <p key = {workout._id}>{workout.reps}</p>
-        // <p key = {workout._id}>{workout.createdAt}</p>
-        // </div>
+      
         <WorkoutDetails key = {workout._id} workout = {workout} />
+        
       ))}
     </div>
   ) : (
