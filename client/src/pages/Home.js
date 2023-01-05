@@ -11,7 +11,7 @@ const Home = () => {
     
     const fetchAllWorkouts = async () => { // another function within because we want to use async/await and useEffect should not be async
       try {
-      const response = await fetch('http://localhost:4000/api/workouts');
+      const response = await fetch('http://localhost:4000/api/workouts/');
       const json = await response.json(); // becomes an array of objects from the DB, where each object represents a workout
 
       if(response.ok) {
