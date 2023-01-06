@@ -32,24 +32,13 @@ const Home = () => {
 
 
   return (
-  <div className = "home">
-    <h2> Home </h2> 
-      
-      <div className = "workouts"> 
-    {workouts ? (
-      <div>
-        {workouts.map((workout) => (
-        
-          <WorkoutDetails key = {workout._id} workout = {workout} />
-
-        ))}
-      </div>
-    ) : (
-      <p>An Error occured while fetching the workouts</p>
-    )}
-    
-  </div>
-      <WorkoutForm/>
+    <div className="home">
+    <div className="workouts">
+      {workouts && workouts.map(workout => (
+        <WorkoutDetails workout={workout} key={workout._id} />
+      ))}
+    </div>
+    <WorkoutForm />
   </div>
   )
 };
