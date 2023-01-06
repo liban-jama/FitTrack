@@ -1,5 +1,6 @@
 import express from 'express';
 import { createNewWorkout, getAllWorkouts, getSingleWorkout, deleteWorkout, updateWorkout} from '../controllers/workoutControllers.js';
+
 const router = express.Router();
 //GET all the workouts
 router.get('/', getAllWorkouts);
