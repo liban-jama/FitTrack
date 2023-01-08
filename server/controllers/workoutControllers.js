@@ -30,6 +30,21 @@ export const getSingleWorkout = async (req, res) =>{
 export const createNewWorkout = async (req, res) => {
 
     const {title, reps, weight} = req.body;
+
+    let emptyFields = []
+      if (!title) {
+        emptyFields.push('title');
+      }
+      if (!weight) {
+        emptyFields.push('weight');
+      }
+      if (!reps) {
+        emptyFields.push('reps');
+      }
+
+      if(emptyFields.length > 0) {
+        return res.status(400).json({error: 'Please Fill In All of The Fields', emptyFields})
+      }
     // add doc to DB
     try {
       const workout = await myWorkoutModel.create({title, weight, reps});

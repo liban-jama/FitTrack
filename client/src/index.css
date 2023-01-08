@@ -76,24 +76,28 @@ input {
   margin-top: 10px;
   margin-bottom: 20px;
   width: 100%;
-  border: 1px solid #ddd;
+  border: 1px solid #ddd; /* Light grey border*/ 
   border-radius: 4px;
   box-sizing: border-box;
 }
 form button {
   background: var(--primary);  /* Styling our green circular submit button*/
   border: 0; /* Strip away the border*/
-  color: #fff; /* Light grey border*/ 
+  color: #fff; /* Text is White*/ 
   padding: 10px;
   font-family: "Poppins";
   border-radius: 4px;
   cursor: pointer;
 }
-div.error {
+div.error { /* targeting our error*/
   padding: 10px;
   background: #ffefef;
   border: 1px solid var(--error);
   color: var(--error);
   border-radius: 4px;
   margin: 20px 0;
+}
+
+input.error {
+  border: 1px solid var (--error);
 }
