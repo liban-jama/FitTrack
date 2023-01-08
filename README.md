@@ -1,6 +1,6 @@
 # FitTrack
 
-[![imgur](https://imgur.com/V7phfXw)](https://github.com/liban-jama/FitTrack/)
+![imgur](https://i.imgur.com/nStxsyk.gif)
 
 How to run:
 
