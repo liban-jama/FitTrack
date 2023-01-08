@@ -5,9 +5,9 @@ import App from './App';
 import { WorkoutsContextProvider } from './context/WorkoutContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render( // Wrapping our Context around the entire app from index.js as we can't import the App component into our WorkoutContext.js file !
+root.render( // Wrapping our Context around the entire app from index.js as we can't import the App component into our WorkoutContext.js file 
   <React.StrictMode>
-    <WorkoutsContextProvider> /
+    <WorkoutsContextProvider> 
       <App />
     </WorkoutsContextProvider>
   </React.StrictMode>
